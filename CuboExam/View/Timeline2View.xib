@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Timeline2View" customModule="CuboExam" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="ko8-UP-jVU" id="tzQ-x5-aBM"/>
+                <outletCollection property="imageViews" destination="Q1T-JZ-RAs" collectionClass="NSMutableArray" id="8TR-6S-BpP"/>
+                <outletCollection property="imageViews" destination="e4n-F6-y19" collectionClass="NSMutableArray" id="O6P-mU-Zpd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ko8-UP-jVU">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="297"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q1T-JZ-RAs">
+                    <rect key="frame" x="0.0" y="0.0" width="181.5" height="297"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e4n-F6-y19">
+                    <rect key="frame" x="193.5" y="0.0" width="181.5" height="297"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="e4n-F6-y19" firstAttribute="width" secondItem="Q1T-JZ-RAs" secondAttribute="width" id="1n9-js-lLY"/>
+                <constraint firstItem="ZT2-5B-c5W" firstAttribute="bottom" secondItem="e4n-F6-y19" secondAttribute="bottom" id="9bz-qa-B1O"/>
+                <constraint firstItem="e4n-F6-y19" firstAttribute="leading" secondItem="Q1T-JZ-RAs" secondAttribute="trailing" constant="12" id="Cpn-Ak-Oa3"/>
+                <constraint firstItem="e4n-F6-y19" firstAttribute="top" secondItem="ZT2-5B-c5W" secondAttribute="top" id="GaI-eb-TPw"/>
+                <constraint firstItem="Q1T-JZ-RAs" firstAttribute="leading" secondItem="ZT2-5B-c5W" secondAttribute="leading" id="UVZ-VJ-esP"/>
+                <constraint firstAttribute="trailing" secondItem="e4n-F6-y19" secondAttribute="trailing" id="aSI-4O-RQg"/>
+                <constraint firstItem="ZT2-5B-c5W" firstAttribute="bottom" secondItem="Q1T-JZ-RAs" secondAttribute="bottom" id="eyc-mD-b9N"/>
+                <constraint firstItem="Q1T-JZ-RAs" firstAttribute="top" secondItem="ZT2-5B-c5W" secondAttribute="top" id="mSW-hP-Jlz"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ZT2-5B-c5W"/>
+            <point key="canvasLocation" x="33.5" y="238.5"/>
+        </view>
+    </objects>
+</document>

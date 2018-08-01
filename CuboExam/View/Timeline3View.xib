@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Timeline3View" customModule="CuboExam" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="i0a-AE-qJJ" id="ren-1a-LAI"/>
+                <outletCollection property="imageViews" destination="CPh-Za-aSe" collectionClass="NSMutableArray" id="Tgn-DY-eZ3"/>
+                <outletCollection property="imageViews" destination="jdG-yy-6CR" collectionClass="NSMutableArray" id="HXC-1K-olT"/>
+                <outletCollection property="imageViews" destination="4cf-qC-g10" collectionClass="NSMutableArray" id="DKP-3n-dyg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="i0a-AE-qJJ">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="297"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CPh-Za-aSe">
+                    <rect key="frame" x="0.0" y="0.0" width="207.5" height="297"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jdG-yy-6CR">
+                    <rect key="frame" x="219.5" y="0.0" width="155.5" height="142.5"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4cf-qC-g10">
+                    <rect key="frame" x="219.5" y="154.5" width="155.5" height="142.5"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="04y-gS-4ld" firstAttribute="bottom" secondItem="4cf-qC-g10" secondAttribute="bottom" id="1oT-2N-LTR"/>
+                <constraint firstItem="4cf-qC-g10" firstAttribute="top" secondItem="jdG-yy-6CR" secondAttribute="bottom" constant="12" id="8ze-Fh-hAu"/>
+                <constraint firstItem="jdG-yy-6CR" firstAttribute="height" secondItem="4cf-qC-g10" secondAttribute="height" id="BKP-Ii-t7q"/>
+                <constraint firstItem="jdG-yy-6CR" firstAttribute="leading" secondItem="4cf-qC-g10" secondAttribute="leading" id="EK3-Px-Ka7"/>
+                <constraint firstItem="CPh-Za-aSe" firstAttribute="leading" secondItem="04y-gS-4ld" secondAttribute="leading" id="Way-kI-434"/>
+                <constraint firstAttribute="trailing" secondItem="4cf-qC-g10" secondAttribute="trailing" id="Wc0-57-VBa"/>
+                <constraint firstAttribute="trailing" secondItem="jdG-yy-6CR" secondAttribute="trailing" id="br5-kc-OXk"/>
+                <constraint firstItem="4cf-qC-g10" firstAttribute="leading" secondItem="CPh-Za-aSe" secondAttribute="trailing" constant="12" id="c1W-nH-6Q1"/>
+                <constraint firstItem="CPh-Za-aSe" firstAttribute="width" secondItem="jdG-yy-6CR" secondAttribute="width" multiplier="1:0.75" id="kaD-bw-1Jc"/>
+                <constraint firstItem="CPh-Za-aSe" firstAttribute="top" secondItem="04y-gS-4ld" secondAttribute="top" id="oYz-2Y-JNI"/>
+                <constraint firstItem="CPh-Za-aSe" firstAttribute="bottom" secondItem="04y-gS-4ld" secondAttribute="bottom" id="rmV-g1-lhb"/>
+                <constraint firstItem="jdG-yy-6CR" firstAttribute="top" secondItem="04y-gS-4ld" secondAttribute="top" id="zvv-K0-02O"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="04y-gS-4ld"/>
+            <point key="canvasLocation" x="33.5" y="238.5"/>
+        </view>
+    </objects>
+</document>
