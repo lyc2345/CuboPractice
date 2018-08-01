@@ -27,7 +27,7 @@ enum Configuration {
 
     static let reverseDateFormatter: DateFormatter = { () -> DateFormatter in
       let dateFormatter = DateFormatter()
-      dateFormatter.dateFormat = "mm/dd/yyyy"
+      dateFormatter.dateFormat = "MM/dd/yyyy"
       return dateFormatter
     }()
   }
