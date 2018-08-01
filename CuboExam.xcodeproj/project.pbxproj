@@ -17,6 +17,23 @@
 		F6F6E22E2111E14D008377AB /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E22D2111E14D008377AB /* Timeline.swift */; };
 		F6F6E2312111E1B5008377AB /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2302111E1B5008377AB /* Api.swift */; };
 		F6F6E2332111E255008377AB /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2322111E255008377AB /* ApiResult.swift */; };
+		F6F6E2362111E9FC008377AB /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2352111E9FC008377AB /* TimelineCell.swift */; };
+		F6F6E2382111EA2F008377AB /* TimelineTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2372111EA2F008377AB /* TimelineTitleView.swift */; };
+		F6F6E23A2111EA45008377AB /* TimelineTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F6E2392111EA45008377AB /* TimelineTitleView.xib */; };
+		F6F6E23C2111EB08008377AB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E23B2111EB08008377AB /* Configuration.swift */; };
+		F6F6E23E2111EBA6008377AB /* TimelineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F6E23D2111EBA6008377AB /* TimelineCell.xib */; };
+		F6F6E2402111ED7A008377AB /* TLParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E23F2111ED7A008377AB /* TLParentView.swift */; };
+		F6F6E2422111F368008377AB /* Timeline1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2412111F368008377AB /* Timeline1View.swift */; };
+		F6F6E2442111F373008377AB /* Timeline2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2432111F373008377AB /* Timeline2View.swift */; };
+		F6F6E2462111F393008377AB /* Timeline3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2452111F393008377AB /* Timeline3View.swift */; };
+		F6F6E2482111F399008377AB /* Timeline4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2472111F399008377AB /* Timeline4View.swift */; };
+		F6F6E24A2111F3A0008377AB /* Timeline5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2492111F3A0008377AB /* Timeline5View.swift */; };
+		F6F6E24C2111F3AC008377AB /* Timeline1View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F6E24B2111F3AC008377AB /* Timeline1View.xib */; };
+		F6F6E24E2111F3B3008377AB /* Timeline2View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F6E24D2111F3B3008377AB /* Timeline2View.xib */; };
+		F6F6E2502111F3B9008377AB /* Timeline3View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F6E24F2111F3B9008377AB /* Timeline3View.xib */; };
+		F6F6E2522111F3BF008377AB /* Timeline4View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F6E2512111F3BF008377AB /* Timeline4View.xib */; };
+		F6F6E2542111F3C6008377AB /* Timeline5View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F6E2532111F3C6008377AB /* Timeline5View.xib */; };
+		F6F6E2572111FB28008377AB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2562111FB28008377AB /* R.generated.swift */; };
 		FF09BCA5821E97582182CF78 /* Pods_CuboExamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 648D00D377CAB2F547223310 /* Pods_CuboExamTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +66,23 @@
 		F6F6E22D2111E14D008377AB /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		F6F6E2302111E1B5008377AB /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		F6F6E2322111E255008377AB /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
+		F6F6E2352111E9FC008377AB /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
+		F6F6E2372111EA2F008377AB /* TimelineTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTitleView.swift; sourceTree = "<group>"; };
+		F6F6E2392111EA45008377AB /* TimelineTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineTitleView.xib; sourceTree = "<group>"; };
+		F6F6E23B2111EB08008377AB /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		F6F6E23D2111EBA6008377AB /* TimelineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineCell.xib; sourceTree = "<group>"; };
+		F6F6E23F2111ED7A008377AB /* TLParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLParentView.swift; sourceTree = "<group>"; };
+		F6F6E2412111F368008377AB /* Timeline1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline1View.swift; sourceTree = "<group>"; };
+		F6F6E2432111F373008377AB /* Timeline2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline2View.swift; sourceTree = "<group>"; };
+		F6F6E2452111F393008377AB /* Timeline3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline3View.swift; sourceTree = "<group>"; };
+		F6F6E2472111F399008377AB /* Timeline4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline4View.swift; sourceTree = "<group>"; };
+		F6F6E2492111F3A0008377AB /* Timeline5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline5View.swift; sourceTree = "<group>"; };
+		F6F6E24B2111F3AC008377AB /* Timeline1View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Timeline1View.xib; sourceTree = "<group>"; };
+		F6F6E24D2111F3B3008377AB /* Timeline2View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Timeline2View.xib; sourceTree = "<group>"; };
+		F6F6E24F2111F3B9008377AB /* Timeline3View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Timeline3View.xib; sourceTree = "<group>"; };
+		F6F6E2512111F3BF008377AB /* Timeline4View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Timeline4View.xib; sourceTree = "<group>"; };
+		F6F6E2532111F3C6008377AB /* Timeline5View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Timeline5View.xib; sourceTree = "<group>"; };
+		F6F6E2562111FB28008377AB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		FFAD39B8FF23830D2349A55C /* Pods-CuboExamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuboExamTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuboExamTests/Pods-CuboExamTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				F6B9CCFF2111DCF600E7734E /* AppDelegate.swift */,
+				F6F6E2562111FB28008377AB /* R.generated.swift */,
+				F6F6E23B2111EB08008377AB /* Configuration.swift */,
 				F6F6E22F2111E1A6008377AB /* API */,
 				F6F6E22A2111E11E008377AB /* Model */,
 				F6F6E22B2111E125008377AB /* View */,
@@ -149,6 +185,21 @@
 		F6F6E22B2111E125008377AB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F6F6E2352111E9FC008377AB /* TimelineCell.swift */,
+				F6F6E23D2111EBA6008377AB /* TimelineCell.xib */,
+				F6F6E2372111EA2F008377AB /* TimelineTitleView.swift */,
+				F6F6E2392111EA45008377AB /* TimelineTitleView.xib */,
+				F6F6E23F2111ED7A008377AB /* TLParentView.swift */,
+				F6F6E2412111F368008377AB /* Timeline1View.swift */,
+				F6F6E24B2111F3AC008377AB /* Timeline1View.xib */,
+				F6F6E2432111F373008377AB /* Timeline2View.swift */,
+				F6F6E24D2111F3B3008377AB /* Timeline2View.xib */,
+				F6F6E2452111F393008377AB /* Timeline3View.swift */,
+				F6F6E24F2111F3B9008377AB /* Timeline3View.xib */,
+				F6F6E2472111F399008377AB /* Timeline4View.swift */,
+				F6F6E2512111F3BF008377AB /* Timeline4View.xib */,
+				F6F6E2492111F3A0008377AB /* Timeline5View.swift */,
+				F6F6E2532111F3C6008377AB /* Timeline5View.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +228,7 @@
 			buildConfigurationList = F6B9CD192111DCF700E7734E /* Build configuration list for PBXNativeTarget "CuboExam" */;
 			buildPhases = (
 				49517C7F3DED4EA04DDFF400 /* [CP] Check Pods Manifest.lock */,
+				F6F6E2552111FACE008377AB /* R.swift */,
 				F6B9CCF82111DCF600E7734E /* Sources */,
 				F6B9CCF92111DCF600E7734E /* Frameworks */,
 				F6B9CCFA2111DCF600E7734E /* Resources */,
@@ -253,9 +305,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F6E2522111F3BF008377AB /* Timeline4View.xib in Resources */,
 				F6B9CD0A2111DCF700E7734E /* LaunchScreen.storyboard in Resources */,
+				F6F6E24E2111F3B3008377AB /* Timeline2View.xib in Resources */,
+				F6F6E24C2111F3AC008377AB /* Timeline1View.xib in Resources */,
 				F6B9CD072111DCF700E7734E /* Assets.xcassets in Resources */,
+				F6F6E23E2111EBA6008377AB /* TimelineCell.xib in Resources */,
+				F6F6E23A2111EA45008377AB /* TimelineTitleView.xib in Resources */,
 				F6B9CD052111DCF600E7734E /* Main.storyboard in Resources */,
+				F6F6E2502111F3B9008377AB /* Timeline3View.xib in Resources */,
+				F6F6E2542111F3C6008377AB /* Timeline5View.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +364,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F6F6E2552111FACE008377AB /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/myfile",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
 		FFDA1D24C21D5CF04D3834DA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,11 +412,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F6E2362111E9FC008377AB /* TimelineCell.swift in Sources */,
+				F6F6E2382111EA2F008377AB /* TimelineTitleView.swift in Sources */,
+				F6F6E2572111FB28008377AB /* R.generated.swift in Sources */,
 				F6F6E22E2111E14D008377AB /* Timeline.swift in Sources */,
+				F6F6E2462111F393008377AB /* Timeline3View.swift in Sources */,
 				F6B9CD022111DCF600E7734E /* ViewController.swift in Sources */,
 				F6F6E2332111E255008377AB /* ApiResult.swift in Sources */,
+				F6F6E2422111F368008377AB /* Timeline1View.swift in Sources */,
 				F6F6E2312111E1B5008377AB /* Api.swift in Sources */,
+				F6F6E23C2111EB08008377AB /* Configuration.swift in Sources */,
+				F6F6E2402111ED7A008377AB /* TLParentView.swift in Sources */,
+				F6F6E2482111F399008377AB /* Timeline4View.swift in Sources */,
+				F6F6E24A2111F3A0008377AB /* Timeline5View.swift in Sources */,
 				F6B9CD002111DCF600E7734E /* AppDelegate.swift in Sources */,
+				F6F6E2442111F373008377AB /* Timeline2View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
