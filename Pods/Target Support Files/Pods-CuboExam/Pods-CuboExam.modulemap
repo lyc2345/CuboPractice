@@ -1,0 +1,6 @@
+framework module Pods_CuboExam {
+  umbrella header "Pods-CuboExam-umbrella.h"
+
+  export *
+  module * { export * }
+}

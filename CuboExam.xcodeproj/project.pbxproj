@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D80581FE68F65CAE1AD139AD /* Pods_CuboExam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267A6041A6E45CB688187567 /* Pods_CuboExam.framework */; };
 		F6B9CD002111DCF600E7734E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B9CCFF2111DCF600E7734E /* AppDelegate.swift */; };
 		F6B9CD022111DCF600E7734E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B9CD012111DCF600E7734E /* ViewController.swift */; };
 		F6B9CD052111DCF600E7734E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B9CD032111DCF600E7734E /* Main.storyboard */; };
 		F6B9CD072111DCF700E7734E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6B9CD062111DCF700E7734E /* Assets.xcassets */; };
 		F6B9CD0A2111DCF700E7734E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B9CD082111DCF700E7734E /* LaunchScreen.storyboard */; };
 		F6B9CD152111DCF700E7734E /* CuboExamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B9CD142111DCF700E7734E /* CuboExamTests.swift */; };
+		FF09BCA5821E97582182CF78 /* Pods_CuboExamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 648D00D377CAB2F547223310 /* Pods_CuboExamTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CA8D9C51577D237CBE16FCA /* Pods-CuboExamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuboExamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuboExamTests/Pods-CuboExamTests.release.xcconfig"; sourceTree = "<group>"; };
+		267A6041A6E45CB688187567 /* Pods_CuboExam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuboExam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		648D00D377CAB2F547223310 /* Pods_CuboExamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuboExamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65EF58023E4CCD22938DEAF /* Pods-CuboExam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuboExam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuboExam/Pods-CuboExam.debug.xcconfig"; sourceTree = "<group>"; };
+		BD08C1FBE986243EB028E448 /* Pods-CuboExam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuboExam.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuboExam/Pods-CuboExam.release.xcconfig"; sourceTree = "<group>"; };
 		F6B9CCFC2111DCF600E7734E /* CuboExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuboExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B9CCFF2111DCF600E7734E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6B9CD012111DCF600E7734E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +43,7 @@
 		F6B9CD102111DCF700E7734E /* CuboExamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuboExamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B9CD142111DCF700E7734E /* CuboExamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuboExamTests.swift; sourceTree = "<group>"; };
 		F6B9CD162111DCF700E7734E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFAD39B8FF23830D2349A55C /* Pods-CuboExamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuboExamTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuboExamTests/Pods-CuboExamTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80581FE68F65CAE1AD139AD /* Pods_CuboExam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF09BCA5821E97582182CF78 /* Pods_CuboExamTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13E290130F780A767A1C0671 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				267A6041A6E45CB688187567 /* Pods_CuboExam.framework */,
+				648D00D377CAB2F547223310 /* Pods_CuboExamTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5057211B658C628FCCFDF386 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A65EF58023E4CCD22938DEAF /* Pods-CuboExam.debug.xcconfig */,
+				BD08C1FBE986243EB028E448 /* Pods-CuboExam.release.xcconfig */,
+				FFAD39B8FF23830D2349A55C /* Pods-CuboExamTests.debug.xcconfig */,
+				0CA8D9C51577D237CBE16FCA /* Pods-CuboExamTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F6B9CCF32111DCF600E7734E = {
 			isa = PBXGroup;
 			children = (
 				F6B9CCFE2111DCF600E7734E /* CuboExam */,
 				F6B9CD132111DCF700E7734E /* CuboExamTests */,
 				F6B9CCFD2111DCF600E7734E /* Products */,
+				5057211B658C628FCCFDF386 /* Pods */,
+				13E290130F780A767A1C0671 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6B9CD192111DCF700E7734E /* Build configuration list for PBXNativeTarget "CuboExam" */;
 			buildPhases = (
+				49517C7F3DED4EA04DDFF400 /* [CP] Check Pods Manifest.lock */,
 				F6B9CCF82111DCF600E7734E /* Sources */,
 				F6B9CCF92111DCF600E7734E /* Frameworks */,
 				F6B9CCFA2111DCF600E7734E /* Resources */,
+				FFDA1D24C21D5CF04D3834DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6B9CD1C2111DCF700E7734E /* Build configuration list for PBXNativeTarget "CuboExamTests" */;
 			buildPhases = (
+				64D7C2A93CBB95BC8A51B1BF /* [CP] Check Pods Manifest.lock */,
 				F6B9CD0C2111DCF700E7734E /* Sources */,
 				F6B9CD0D2111DCF700E7734E /* Frameworks */,
 				F6B9CD0E2111DCF700E7734E /* Resources */,
@@ -191,6 +226,71 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49517C7F3DED4EA04DDFF400 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CuboExam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64D7C2A93CBB95BC8A51B1BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CuboExamTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFDA1D24C21D5CF04D3834DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CuboExam/Pods-CuboExam-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuboExam/Pods-CuboExam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F6B9CCF82111DCF600E7734E /* Sources */ = {
@@ -356,6 +456,7 @@
 		};
 		F6B9CD1A2111DCF700E7734E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A65EF58023E4CCD22938DEAF /* Pods-CuboExam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -375,6 +476,7 @@
 		};
 		F6B9CD1B2111DCF700E7734E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD08C1FBE986243EB028E448 /* Pods-CuboExam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +496,7 @@
 		};
 		F6B9CD1D2111DCF700E7734E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFAD39B8FF23830D2349A55C /* Pods-CuboExamTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +518,7 @@
 		};
 		F6B9CD1E2111DCF700E7734E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CA8D9C51577D237CBE16FCA /* Pods-CuboExamTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
