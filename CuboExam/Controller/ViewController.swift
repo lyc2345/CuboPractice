@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   var currentPages: Int {
     if timelines.count == 0 { return 0 }
-    return timelines.count % 10
+    return timelines.count / 10
   }
   
   override func viewDidLoad() {
