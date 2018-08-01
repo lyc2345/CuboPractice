@@ -9,7 +9,7 @@
 import Foundation
 
 enum ApiResult<T> {
-  case success(timeline: T)
+  case success(timelines: T)
   case failure(error: NetworkRequestError)
 }
 

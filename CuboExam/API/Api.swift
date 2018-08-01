@@ -34,8 +34,20 @@ class Api {
         completion(.failure(error: .jsonParsingError(key: "response.data is nil")))
         return
       }
-      let json = JSON(data: data)
-      
+      guard let json = try? JSON(data: data) else {
+        completion(.failure(error: .jsonParsingError(key: "response.data to JSON(data:) failed")))
+        return
+      }
+      let timelines = json.arrayValue.map { (dictJson)  -> Timeline in
+        let dict = dictJson.dictionaryValue
+        let timeline = Timeline(title: dict["title"]?.stringValue ?? "",
+                                dateString: dict["date"]?.stringValue ?? "",
+                                imageUrls: (dict["images"]?.arrayValue ?? []).map { (url) in
+                                  url.stringValue
+        })
+        return timeline
+      }
+      completion(.success(timelines: timelines))
 
     }
   }
