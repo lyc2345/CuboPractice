@@ -50,7 +50,7 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
       }
       let imageView = timelineView.imageViews[index]
       // set default background color for imageView
-      imageView.backgroundColor = Configuration.Theme.gray
+      imageView.backgroundColor = Configuration.Theme.lightGray
       
       imageView.downloadImage(
         urlString: urlString,
@@ -65,7 +65,7 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
   
   func bind(timeline: Timeline) {
     
-    timelineTitleView.titleLabel.text = timeline.title
+    timelineTitleView.titleLabel.text = timeline.title + timeline.imageKeys.reduce("", +)
     timelineTitleView.subTitleLabel.text = timeline.displayDateString + "  count: \(timeline.imageUrls.count)"
 
     if let timelineView = self.timelineView {
@@ -87,4 +87,5 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
     timelineView?.removeFromSuperview()
     timelineView = nil
   }
+
 }

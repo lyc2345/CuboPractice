@@ -20,7 +20,8 @@ enum Configuration {
   
   enum Theme {
     static let black = UIColor.black
-    static let gray = UIColor(hex: "DFDFDF")
+    static let lightGray = UIColor(hex: "DFDFDF")
+    static let gray = UIColor.gray
     static let white = UIColor.white
   }
   

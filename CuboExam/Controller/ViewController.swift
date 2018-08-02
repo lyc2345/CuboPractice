@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     configureTableView()
     fetchTimelines(pageNumber: 0) { }
   }
-  
+
   // MARK: Config
 
   func configureTableView() {
