@@ -117,6 +117,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let timeline = timelines[indexPath.row]
     cell.bind(timeline: timeline)
     
+    // fix: first loaded page cells titleLabel, subTitleLabel be cut or disappear.
+    // force to make cell layout again
+    if #available(iOS 10.0, *) {
+      cell.layoutIfNeeded()
+    } else {
+      cell.layoutSubviews()
+    }
+
     // index 5 means more than 5 photos
     cell.timelineView?.handleImageIndex = { (index) in
       print("did tap index: \(index)")
