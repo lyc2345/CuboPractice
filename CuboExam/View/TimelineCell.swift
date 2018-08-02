@@ -73,6 +73,8 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
   override func prepareForReuse() {
     super.prepareForReuse()
     
+    timelineTitleView.titleLabel.text = ""
+    timelineTitleView.subTitleLabel.text = ""
     timelineView?.removeFromSuperview()
     timelineView = nil
   }
