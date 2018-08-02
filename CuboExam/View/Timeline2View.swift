@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Timeline2View: TLParentView {
+class Timeline2View: TimelineParentView {
 
   @IBOutlet var contentView: UIView!
 
@@ -24,6 +24,13 @@ class Timeline2View: TLParentView {
     setup()
   }
   
+  override func draw(_ rect: CGRect) {
+    super.draw(rect)
+    imageViews.forEach {
+      $0.roundCorner(radius: 2)
+    }
+  }
+  
   func xibInit() {
     Bundle.main.loadNibNamed(String(describing: type(of: self)),
                              owner: self,
@@ -34,6 +41,9 @@ class Timeline2View: TLParentView {
   }
   
   func setup() {
-    
+    imageViews.forEach {
+      $0.contentMode = .scaleAspectFill
+      $0.clipsToBounds = true
+    }
   }
 }

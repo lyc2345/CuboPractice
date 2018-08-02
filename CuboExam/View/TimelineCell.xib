@@ -11,40 +11,41 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="352" id="3Pe-X8-zfo" customClass="TimelineCell" customModule="CuboExam" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="518" height="352"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="438" id="3Pe-X8-zfo" customClass="TimelineCell" customModule="CuboExam" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="518" height="438"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Pe-X8-zfo" id="YP0-Se-lYa">
-                <rect key="frame" x="0.0" y="0.0" width="518" height="351.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="518" height="437.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baa-p7-ctN" customClass="TimelineTitleView" customModule="CuboExam" customModuleProvider="target">
-                        <rect key="frame" x="12" y="12" width="494" height="50"/>
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="baa-p7-ctN" customClass="TimelineTitleView" customModule="CuboExam" customModuleProvider="target">
+                        <rect key="frame" x="16" y="12" width="486" height="35"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" priority="250" constant="50" id="Sf2-Lj-8lw"/>
+                            <constraint firstAttribute="height" priority="240" constant="35" id="JLN-4b-yBS"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="UmD-sO-2VN"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVM-9p-zpw">
-                        <rect key="frame" x="12" y="74" width="494" height="265.5"/>
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="iVM-9p-zpw">
+                        <rect key="frame" x="16" y="59" width="486" height="346.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="baa-p7-ctN" secondAttribute="trailing" constant="12" id="0qD-gY-urz"/>
-                    <constraint firstItem="baa-p7-ctN" firstAttribute="leading" secondItem="YP0-Se-lYa" secondAttribute="leading" constant="12" id="4S2-vY-xKn"/>
+                    <constraint firstAttribute="trailing" secondItem="baa-p7-ctN" secondAttribute="trailing" constant="16" id="0qD-gY-urz"/>
+                    <constraint firstItem="baa-p7-ctN" firstAttribute="leading" secondItem="YP0-Se-lYa" secondAttribute="leading" constant="16" id="4S2-vY-xKn"/>
                     <constraint firstItem="baa-p7-ctN" firstAttribute="top" secondItem="YP0-Se-lYa" secondAttribute="top" constant="12" id="HFf-dx-C4I"/>
-                    <constraint firstAttribute="trailing" secondItem="iVM-9p-zpw" secondAttribute="trailing" constant="12" id="K42-vX-49Q"/>
-                    <constraint firstItem="iVM-9p-zpw" firstAttribute="leading" secondItem="YP0-Se-lYa" secondAttribute="leading" constant="12" id="TrA-U1-jBw"/>
+                    <constraint firstAttribute="trailing" secondItem="iVM-9p-zpw" secondAttribute="trailing" constant="16" id="K42-vX-49Q"/>
+                    <constraint firstItem="iVM-9p-zpw" firstAttribute="leading" secondItem="YP0-Se-lYa" secondAttribute="leading" constant="16" id="TrA-U1-jBw"/>
                     <constraint firstItem="iVM-9p-zpw" firstAttribute="top" secondItem="baa-p7-ctN" secondAttribute="bottom" constant="12" id="tAz-ny-mTV"/>
-                    <constraint firstAttribute="bottom" secondItem="iVM-9p-zpw" secondAttribute="bottom" constant="12" id="vTy-Pe-6g2"/>
+                    <constraint firstAttribute="bottom" secondItem="iVM-9p-zpw" secondAttribute="bottom" constant="32" id="vTy-Pe-6g2"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="subContentView" destination="iVM-9p-zpw" id="XoQ-D9-BjT"/>
                 <outlet property="timelineTitleView" destination="baa-p7-ctN" id="Ln5-R1-3bY"/>
             </connections>
-            <point key="canvasLocation" x="-269" y="1101"/>
+            <point key="canvasLocation" x="-269" y="1144"/>
         </tableViewCell>
     </objects>
 </document>

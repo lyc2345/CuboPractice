@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,17 +22,20 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="i0a-AE-qJJ">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="297"/>
+            <rect key="frame" x="0.0" y="0.0" width="437" height="270"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CPh-Za-aSe">
-                    <rect key="frame" x="0.0" y="0.0" width="207.5" height="297"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="CPh-Za-aSe">
+                    <rect key="frame" x="0.0" y="0.0" width="257" height="270"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="CPh-Za-aSe" secondAttribute="height" multiplier="1:1" priority="999" id="fjP-mA-jNi"/>
+                    </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jdG-yy-6CR">
-                    <rect key="frame" x="219.5" y="0.0" width="155.5" height="142.5"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="jdG-yy-6CR">
+                    <rect key="frame" x="269" y="0.0" width="168" height="129"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4cf-qC-g10">
-                    <rect key="frame" x="219.5" y="154.5" width="155.5" height="142.5"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="4cf-qC-g10">
+                    <rect key="frame" x="269" y="141" width="168" height="129"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -44,16 +48,17 @@
                 <constraint firstAttribute="trailing" secondItem="4cf-qC-g10" secondAttribute="trailing" id="Wc0-57-VBa"/>
                 <constraint firstAttribute="trailing" secondItem="jdG-yy-6CR" secondAttribute="trailing" id="br5-kc-OXk"/>
                 <constraint firstItem="4cf-qC-g10" firstAttribute="leading" secondItem="CPh-Za-aSe" secondAttribute="trailing" constant="12" id="c1W-nH-6Q1"/>
-                <constraint firstItem="CPh-Za-aSe" firstAttribute="width" secondItem="jdG-yy-6CR" secondAttribute="width" multiplier="1:0.75" id="kaD-bw-1Jc"/>
+                <constraint firstItem="CPh-Za-aSe" firstAttribute="width" secondItem="i0a-AE-qJJ" secondAttribute="width" multiplier="1:1.7" id="hIr-Qr-G1F"/>
                 <constraint firstItem="CPh-Za-aSe" firstAttribute="top" secondItem="04y-gS-4ld" secondAttribute="top" id="oYz-2Y-JNI"/>
                 <constraint firstItem="CPh-Za-aSe" firstAttribute="bottom" secondItem="04y-gS-4ld" secondAttribute="bottom" id="rmV-g1-lhb"/>
+                <constraint firstItem="4cf-qC-g10" firstAttribute="width" secondItem="jdG-yy-6CR" secondAttribute="width" id="zPX-NV-VrV"/>
                 <constraint firstItem="jdG-yy-6CR" firstAttribute="top" secondItem="04y-gS-4ld" secondAttribute="top" id="zvv-K0-02O"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="04y-gS-4ld"/>
-            <point key="canvasLocation" x="33.5" y="238.5"/>
+            <point key="canvasLocation" x="77.5" y="213"/>
         </view>
     </objects>
 </document>

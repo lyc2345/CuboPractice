@@ -16,31 +16,74 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
   // TimelineLayoutKit
   @IBOutlet weak var subContentView: UIView!
 
-  weak var timelineView: TLParentView?
+  var timelineView: TimelineParentView?
+
+  func setLayout(timeline: Timeline) {
+    if timelineView == nil {
+      timelineView = bind(timelineType: TimelineType(urls: timeline.imageUrls))
+    }
+  }
   
-  func bind(timeline: Timeline) {
-    
-    timelineView = bind(timelineType: TimelineType(urls: timeline.imageUrls))
-    timelineTitleView.titleLabel.text = timeline.title
-    timelineTitleView.subTitleLabel.text = timeline.displayDateString
+  private func setImages(timelineView: TimelineParentView, timeline: Timeline) {
     
     for (index, urlString) in timeline.imageUrls.enumerated() {
-      guard let timelineView = self.timelineView else {
-        return
-      }
+      
       guard timelineView.imageViews.count > index else {
         let moreNumber = timeline.imageUrls.count - timelineView.imageViews.count
         timelineView.imageViews.last?.mask(count: moreNumber)
         return
       }
-      let url = URL(string: urlString)
-      timelineView.imageViews[index].kf.setImage(with: url)
+      // uncomment this to use kingfisher async UIImageView
+      //let url = URL(string: urlString)
+      //timelineView.imageViews[index].kf.setImage(
+      //  with: url,
+      //  placeholder: nil,
+      //  options: [],
+      //  progressBlock: nil
+      //) { [weak self] (_, _, _, _) in
+      //
+      //    self?.setNeedsUpdateConstraints()
+      //    self?.updateConstraintsIfNeeded()
+      //}
+      guard timeline.imageUrls.count == timeline.imageKeys.count else {
+        return
+      }
+      let imageView = timelineView.imageViews[index]
+      // set default background color for imageView
+      imageView.backgroundColor = Configuration.Theme.gray
+      
+      imageView.downloadImage(
+        urlString: urlString,
+        key: timeline.imageKeys[index]
+      ) { [weak self ](_) in
+        
+        self?.setNeedsUpdateConstraints()
+        self?.updateConstraintsIfNeeded()
+      }
+    }
+  }
+  
+  func bind(timeline: Timeline) {
+    
+    timelineTitleView.titleLabel.text = timeline.title
+    timelineTitleView.subTitleLabel.text = timeline.displayDateString + "  count: \(timeline.imageUrls.count)"
+
+    if let timelineView = self.timelineView {
+      setImages(timelineView: timelineView, timeline: timeline)
+    } else {
+      setLayout(timeline: timeline)
+      guard let timelineView = self.timelineView else {
+        return
+      }
+      setImages(timelineView: timelineView, timeline: timeline)
     }
   }
   
   override func prepareForReuse() {
     super.prepareForReuse()
     
+    timelineTitleView.titleLabel.text = ""
+    timelineTitleView.subTitleLabel.text = ""
     timelineView?.removeFromSuperview()
     timelineView = nil
   }

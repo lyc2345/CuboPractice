@@ -11,6 +11,7 @@ target 'CuboExam' do
   pod 'Kingfisher'
   pod 'R.swift'
   pod 'SnapKit', '~> 4.0.0'
+  pod 'Hue'
 
   target 'CuboExamTests' do
     inherit! :search_paths
