@@ -11,21 +11,38 @@ import Kingfisher
 
 extension UIImageView {
   
-  func downloadImage(urlString: String, completion: ((UIImage?) -> Void)? = nil) {
+  func downloadImage(urlString: String,
+                     key: String,
+                     completion: ((UIImage?) -> Void)? = nil) {
     
+    // use cache first
+    if let image = CacheKit.default.cachedImage(name: key) {
+      DispatchQueue.main.async {
+        self.image = image
+        completion?(image)
+      }
+      return
+    }
+    
+    // if cache nil, fetch it
     guard let url = URL(string: urlString) else { return }
-    URLSession.shared.dataTask(with: url,
-                               completionHandler: { (data, response, error) -> Void in
+    URLSession.shared.dataTask(
+      with: url,
+      completionHandler: { (data, response, error) -> Void in
       
       if error != nil {
         completion?(nil)
         return
-      }
-      DispatchQueue.main.async(execute: { () -> Void in
-        let image = UIImage(data: data!)
-        self.image = image
-        completion?(image)
-      })
+        }
+        DispatchQueue.main.async {
+          let image = UIImage(data: data!)
+          self.image = image
+          // if there is image, cache it
+          if let strongImage = image {
+            CacheKit.default.cache(image: strongImage, name: key)
+          }
+          completion?(image)
+        }
     }).resume()
   }
   

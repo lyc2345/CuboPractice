@@ -31,4 +31,8 @@ enum Configuration {
       return dateFormatter
     }()
   }
+  
+  enum Random {
+    static let number = 6
+  }
 }

@@ -24,12 +24,12 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
     }
   }
   
-  private func setImages(timelineView: TLParentView, urls: [String]) {
+  private func setImages(timelineView: TLParentView, timeline: Timeline) {
     
-    for (index, urlString) in urls.enumerated() {
+    for (index, urlString) in timeline.imageUrls.enumerated() {
       
       guard timelineView.imageViews.count > index else {
-        let moreNumber = urls.count - timelineView.imageViews.count
+        let moreNumber = timeline.imageUrls.count - timelineView.imageViews.count
         timelineView.imageViews.last?.mask(count: moreNumber)
         return
       }
@@ -43,10 +43,13 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
       //                                            self?.updateConstraintsIfNeeded()
       //}
       //timelineView.imageViews[index].imageFromServerURL(urlString: urlString)
-      timelineView.imageViews[index].downloadImage(urlString: urlString) { [weak self] (_) in
+      guard timeline.imageUrls.count == timeline.imageKeys.count else {
+        return
+      }
+      timelineView.imageViews[index].downloadImage(urlString: urlString,
+                                                   key: timeline.imageKeys[index]) { [weak self ](_) in
         //self?.setNeedsUpdateConstraints()
         //self?.updateConstraintsIfNeeded()
-        
         self?.setNeedsLayout()
         self?.layoutIfNeeded()
       }
@@ -59,13 +62,13 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
     timelineTitleView.subTitleLabel.text = timeline.displayDateString + "  count: \(timeline.imageUrls.count)"
 
     if let timelineView = self.timelineView {
-      setImages(timelineView: timelineView, urls: timeline.imageUrls)
+      setImages(timelineView: timelineView, timeline: timeline)
     } else {
       setLayout(timeline: timeline)
       guard let timelineView = self.timelineView else {
         return
       }
-      setImages(timelineView: timelineView, urls: timeline.imageUrls)
+      setImages(timelineView: timelineView, timeline: timeline)
     }
   }
   

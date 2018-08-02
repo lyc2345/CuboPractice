@@ -22,6 +22,12 @@ struct Timeline {
   var dateString: String = ""
   var imageUrls: [String] = []
 
+  private var _imageKeys: [String] = []
+  
+  var imageKeys: [String] {
+    return _imageKeys
+  }
+
   var displayDateString: String {
     guard let date = Date.date(from: self.dateString) else {
       return ""
@@ -33,5 +39,10 @@ struct Timeline {
     self.title = title
     self.dateString = dateString
     self.imageUrls = imageUrls
+    
+    let imageKeys = imageUrls.map {
+      $0.appendRandom
+    }
+    self._imageKeys = imageKeys
   }
 }
