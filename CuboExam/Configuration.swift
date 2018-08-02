@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hue
 
 enum Configuration {
   
@@ -19,7 +20,7 @@ enum Configuration {
   
   enum Theme {
     static let black = UIColor.black
-    static let gray = UIColor.gray
+    static let gray = UIColor(hex: "DFDFDF")
     static let white = UIColor.white
   }
   

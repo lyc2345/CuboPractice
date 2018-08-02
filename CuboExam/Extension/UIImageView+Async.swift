@@ -15,6 +15,9 @@ extension UIImageView {
                      key: String,
                      completion: ((UIImage?) -> Void)? = nil) {
     
+    // set default background color for imageView
+    backgroundColor = Configuration.Theme.gray
+    
     // use cache first
     if let image = CacheKit.default.cachedImage(name: key) {
       DispatchQueue.main.async {
