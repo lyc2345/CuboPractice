@@ -16,25 +16,52 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
   // TimelineLayoutKit
   @IBOutlet weak var subContentView: UIView!
 
-  weak var timelineView: TLParentView?
+  var timelineView: TLParentView?
   
-  func bind(timeline: Timeline) {
+  func setLayout(timeline: Timeline) {
+    if timelineView == nil {
+      timelineView = bind(timelineType: TimelineType(urls: timeline.imageUrls))
+    }
+  }
+  
+  private func setImages(timelineView: TLParentView, urls: [String]) {
     
-    timelineView = bind(timelineType: TimelineType(urls: timeline.imageUrls))
-    timelineTitleView.titleLabel.text = timeline.title
-    timelineTitleView.subTitleLabel.text = timeline.displayDateString
-    
-    for (index, urlString) in timeline.imageUrls.enumerated() {
-      guard let timelineView = self.timelineView else {
-        return
-      }
+    for (index, urlString) in urls.enumerated() {
+      
       guard timelineView.imageViews.count > index else {
-        let moreNumber = timeline.imageUrls.count - timelineView.imageViews.count
+        let moreNumber = urls.count - timelineView.imageViews.count
         timelineView.imageViews.last?.mask(count: moreNumber)
         return
       }
-      let url = URL(string: urlString)
-      timelineView.imageViews[index].kf.setImage(with: url)
+      //let url = URL(string: urlString)
+      //timelineView.imageViews[index].kf.setImage(with: url,
+      //                                           placeholder: nil,
+      //                                           options: [],
+      //                                           progressBlock: nil) { [weak self] (_, _, _, _) in
+      //                                            self?.setNeedsUpdateConstraints()
+      //                                            self?.updateConstraintsIfNeeded()
+      //}
+      //timelineView.imageViews[index].imageFromServerURL(urlString: urlString)
+      timelineView.imageViews[index].downloadImage(urlString: urlString) { [weak self] (_) in
+        self?.setNeedsUpdateConstraints()
+        self?.updateConstraintsIfNeeded()
+      }
+    }
+  }
+  
+  func bind(timeline: Timeline) {
+    
+    timelineTitleView.titleLabel.text = timeline.title
+    timelineTitleView.subTitleLabel.text = timeline.displayDateString + "  count: \(timeline.imageUrls.count)"
+
+    if let timelineView = self.timelineView {
+      setImages(timelineView: timelineView, urls: timeline.imageUrls)
+    } else {
+      setLayout(timeline: timeline)
+      guard let timelineView = self.timelineView else {
+        return
+      }
+      setImages(timelineView: timelineView, urls: timeline.imageUrls)
     }
   }
   

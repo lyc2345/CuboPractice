@@ -34,6 +34,7 @@
 		F6F6E2522111F3BF008377AB /* Timeline4View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F6E2512111F3BF008377AB /* Timeline4View.xib */; };
 		F6F6E2542111F3C6008377AB /* Timeline5View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F6E2532111F3C6008377AB /* Timeline5View.xib */; };
 		F6F6E2572111FB28008377AB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2562111FB28008377AB /* R.generated.swift */; };
+		F6F6E25A21121EA8008377AB /* UIImageView+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E25921121EA8008377AB /* UIImageView+Async.swift */; };
 		FF09BCA5821E97582182CF78 /* Pods_CuboExamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 648D00D377CAB2F547223310 /* Pods_CuboExamTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		F6F6E2512111F3BF008377AB /* Timeline4View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Timeline4View.xib; sourceTree = "<group>"; };
 		F6F6E2532111F3C6008377AB /* Timeline5View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Timeline5View.xib; sourceTree = "<group>"; };
 		F6F6E2562111FB28008377AB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		F6F6E25921121EA8008377AB /* UIImageView+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Async.swift"; sourceTree = "<group>"; };
 		FFAD39B8FF23830D2349A55C /* Pods-CuboExamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuboExamTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuboExamTests/Pods-CuboExamTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 				F6B9CCFF2111DCF600E7734E /* AppDelegate.swift */,
 				F6F6E2562111FB28008377AB /* R.generated.swift */,
 				F6F6E23B2111EB08008377AB /* Configuration.swift */,
+				F6F6E25821121E92008377AB /* Extension */,
 				F6F6E22F2111E1A6008377AB /* API */,
 				F6F6E22A2111E11E008377AB /* Model */,
 				F6F6E22B2111E125008377AB /* View */,
@@ -218,6 +221,14 @@
 				F6F6E2302111E1B5008377AB /* Api.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		F6F6E25821121E92008377AB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F6F6E25921121EA8008377AB /* UIImageView+Async.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +430,7 @@
 				F6F6E2462111F393008377AB /* Timeline3View.swift in Sources */,
 				F6B9CD022111DCF600E7734E /* ViewController.swift in Sources */,
 				F6F6E2332111E255008377AB /* ApiResult.swift in Sources */,
+				F6F6E25A21121EA8008377AB /* UIImageView+Async.swift in Sources */,
 				F6F6E2422111F368008377AB /* Timeline1View.swift in Sources */,
 				F6F6E2312111E1B5008377AB /* Api.swift in Sources */,
 				F6F6E23C2111EB08008377AB /* Configuration.swift in Sources */,

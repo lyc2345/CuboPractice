@@ -138,6 +138,7 @@ extension TimelineLayoutKit {
     timelineContentView.snp.makeConstraints { (make) in
       make.edges.equalTo(subContentView)
     }
+    timelineContentView.setContentCompressionResistancePriority(.required, for: .vertical)
     return timelineContentView
   }
   

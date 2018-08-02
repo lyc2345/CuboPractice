@@ -34,6 +34,9 @@ class Timeline5View: TLParentView {
   }
   
   func setup() {
-    
+    imageViews.forEach {
+      $0.contentMode = .scaleAspectFill
+      $0.clipsToBounds = true
+    }
   }
 }

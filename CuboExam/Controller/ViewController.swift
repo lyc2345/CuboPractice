@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     tableView.dataSource = self
     tableView.separatorStyle = .none
     tableView.rowHeight = UITableViewAutomaticDimension
-    tableView.estimatedRowHeight = 200
+    tableView.estimatedRowHeight = 300
     tableView.register(R.nib.timelineCell(),
                        forCellReuseIdentifier: R.nib.timelineCell.name)
   }
@@ -69,6 +69,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return timelines.count
+  }
+  
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    
+    if let cell = cell as? TimelineCell {
+      let timeline = timelines[indexPath.row]
+      cell.setLayout(timeline: timeline)
+    }
+    
+    if timelines.count - 1 == indexPath.row {
+      print("loading current page: \(currentPages)")
+      fetchTimelines(pageNumber: currentPages)
+    }
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
