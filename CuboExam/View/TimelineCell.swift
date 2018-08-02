@@ -48,10 +48,8 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
       }
       timelineView.imageViews[index].downloadImage(urlString: urlString,
                                                    key: timeline.imageKeys[index]) { [weak self ](_) in
-        //self?.setNeedsUpdateConstraints()
-        //self?.updateConstraintsIfNeeded()
-        self?.setNeedsLayout()
-        self?.layoutIfNeeded()
+        self?.setNeedsUpdateConstraints()
+        self?.updateConstraintsIfNeeded()
       }
     }
   }

@@ -34,19 +34,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     tableView.separatorStyle = .none
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 300
+    tableView.allowsSelection = false
     tableView.register(R.nib.timelineCell(),
                        forCellReuseIdentifier: R.nib.timelineCell.name)
   }
   
   func fetchTimelines(pageNumber: Int) {
     api.fetchTimeline { [weak self] (result) in
+      
       switch result {
       case .success(timelines: let newTimelines):
         
         self?.timelines.append(contentsOf: newTimelines)
         self?.tableView.reloadData()
         
-      case .failure(error: let error):
+      // to handle request error
+      case .failure(error: _):
         ()
         //switch error {
         //case .jsonParsingError(key: let key):
