@@ -17,7 +17,7 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
   @IBOutlet weak var subContentView: UIView!
 
   var timelineView: TimelineParentView?
-
+  
   func setLayout(timeline: Timeline) {
     if timelineView == nil {
       timelineView = bind(timelineType: TimelineType(urls: timeline.imageUrls))
