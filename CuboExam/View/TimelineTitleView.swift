@@ -42,4 +42,5 @@ class TimelineTitleView: UIView {
     subTitleLabel.font = Configuration.Font.subTitle
     subTitleLabel.textColor = Configuration.Theme.gray
   }
+  
 }

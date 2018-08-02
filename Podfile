@@ -12,6 +12,7 @@ target 'CuboExam' do
   pod 'R.swift'
   pod 'SnapKit', '~> 4.0.0'
   pod 'Hue'
+  pod 'UITableView+FDTemplateLayoutCell'
 
   target 'CuboExamTests' do
     inherit! :search_paths

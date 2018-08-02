@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     configureTableView()
     fetchTimelines(pageNumber: 0) { }
   }
-  
+
   // MARK: Config
 
   func configureTableView() {
@@ -83,7 +83,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { }
 
-
   // MARK: UITableViewDataSource
   
   func numberOfSections(in tableView: UITableView) -> Int { return 1 }
@@ -117,6 +116,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let timeline = timelines[indexPath.row]
     cell.bind(timeline: timeline)
     
+    // fix: first loaded page cells titleLabel, subTitleLabel be cut or disappear.
+    // force to make cell layout again
+    if #available(iOS 10.0, *) {
+      cell.layoutIfNeeded()
+    } else {
+      cell.layoutSubviews()
+    }
+
     // index 5 means more than 5 photos
     cell.timelineView?.handleImageIndex = { (index) in
       print("did tap index: \(index)")

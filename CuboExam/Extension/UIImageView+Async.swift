@@ -31,11 +31,12 @@ extension UIImageView {
       with: url,
       completionHandler: { (data, response, error) -> Void in
       
-      if error != nil {
-        completion?(nil)
-        return
-        }
         DispatchQueue.main.async {
+          
+          if error != nil {
+            completion?(nil)
+            return
+          }
           let image = UIImage(data: data!)
           self.image = image
           // if there is image, cache it
@@ -46,5 +47,4 @@ extension UIImageView {
         }
     }).resume()
   }
-  
 }

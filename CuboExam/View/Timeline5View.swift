@@ -41,6 +41,7 @@ class Timeline5View: TimelineParentView {
   }
   
   func setup() {
+    backgroundColor = .clear
     imageViews.forEach {
       $0.contentMode = .scaleAspectFill
       $0.clipsToBounds = true
