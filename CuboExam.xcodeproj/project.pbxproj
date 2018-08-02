@@ -17,6 +17,9 @@
 		F6E57E6A211340C300C58555 /* UIView+RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E57E69211340C300C58555 /* UIView+RoundCorner.swift */; };
 		F6E57E6D2113442F00C58555 /* CacheKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E57E6C2113442F00C58555 /* CacheKit.swift */; };
 		F6E57E6F2113451A00C58555 /* RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E57E6E2113451A00C58555 /* RandomKit.swift */; };
+		F6E57E7121134D5000C58555 /* UITableView+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E57E7021134D5000C58555 /* UITableView+Spinner.swift */; };
+		F6E57E732113590800C58555 /* UIImage+NumberMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E57E722113590800C58555 /* UIImage+NumberMask.swift */; };
+		F6E57E752113593A00C58555 /* Date+StringToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E57E742113593A00C58555 /* Date+StringToDate.swift */; };
 		F6F6E22E2111E14D008377AB /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E22D2111E14D008377AB /* Timeline.swift */; };
 		F6F6E2312111E1B5008377AB /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2302111E1B5008377AB /* Api.swift */; };
 		F6F6E2332111E255008377AB /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2322111E255008377AB /* ApiResult.swift */; };
@@ -25,7 +28,7 @@
 		F6F6E23A2111EA45008377AB /* TimelineTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F6E2392111EA45008377AB /* TimelineTitleView.xib */; };
 		F6F6E23C2111EB08008377AB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E23B2111EB08008377AB /* Configuration.swift */; };
 		F6F6E23E2111EBA6008377AB /* TimelineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F6E23D2111EBA6008377AB /* TimelineCell.xib */; };
-		F6F6E2402111ED7A008377AB /* TLParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E23F2111ED7A008377AB /* TLParentView.swift */; };
+		F6F6E2402111ED7A008377AB /* TimelineParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E23F2111ED7A008377AB /* TimelineParentView.swift */; };
 		F6F6E2422111F368008377AB /* Timeline1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2412111F368008377AB /* Timeline1View.swift */; };
 		F6F6E2442111F373008377AB /* Timeline2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2432111F373008377AB /* Timeline2View.swift */; };
 		F6F6E2462111F393008377AB /* Timeline3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6E2452111F393008377AB /* Timeline3View.swift */; };
@@ -70,6 +73,9 @@
 		F6E57E69211340C300C58555 /* UIView+RoundCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundCorner.swift"; sourceTree = "<group>"; };
 		F6E57E6C2113442F00C58555 /* CacheKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheKit.swift; sourceTree = "<group>"; };
 		F6E57E6E2113451A00C58555 /* RandomKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomKit.swift; sourceTree = "<group>"; };
+		F6E57E7021134D5000C58555 /* UITableView+Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Spinner.swift"; sourceTree = "<group>"; };
+		F6E57E722113590800C58555 /* UIImage+NumberMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+NumberMask.swift"; sourceTree = "<group>"; };
+		F6E57E742113593A00C58555 /* Date+StringToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StringToDate.swift"; sourceTree = "<group>"; };
 		F6F6E22D2111E14D008377AB /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		F6F6E2302111E1B5008377AB /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		F6F6E2322111E255008377AB /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
@@ -78,7 +84,7 @@
 		F6F6E2392111EA45008377AB /* TimelineTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineTitleView.xib; sourceTree = "<group>"; };
 		F6F6E23B2111EB08008377AB /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		F6F6E23D2111EBA6008377AB /* TimelineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineCell.xib; sourceTree = "<group>"; };
-		F6F6E23F2111ED7A008377AB /* TLParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLParentView.swift; sourceTree = "<group>"; };
+		F6F6E23F2111ED7A008377AB /* TimelineParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineParentView.swift; sourceTree = "<group>"; };
 		F6F6E2412111F368008377AB /* Timeline1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline1View.swift; sourceTree = "<group>"; };
 		F6F6E2432111F373008377AB /* Timeline2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline2View.swift; sourceTree = "<group>"; };
 		F6F6E2452111F393008377AB /* Timeline3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline3View.swift; sourceTree = "<group>"; };
@@ -208,7 +214,7 @@
 				F6F6E23D2111EBA6008377AB /* TimelineCell.xib */,
 				F6F6E2372111EA2F008377AB /* TimelineTitleView.swift */,
 				F6F6E2392111EA45008377AB /* TimelineTitleView.xib */,
-				F6F6E23F2111ED7A008377AB /* TLParentView.swift */,
+				F6F6E23F2111ED7A008377AB /* TimelineParentView.swift */,
 				F6F6E2412111F368008377AB /* Timeline1View.swift */,
 				F6F6E24B2111F3AC008377AB /* Timeline1View.xib */,
 				F6F6E2432111F373008377AB /* Timeline2View.swift */,
@@ -243,7 +249,10 @@
 			isa = PBXGroup;
 			children = (
 				F6F6E25921121EA8008377AB /* UIImageView+Async.swift */,
+				F6E57E722113590800C58555 /* UIImage+NumberMask.swift */,
 				F6E57E69211340C300C58555 /* UIView+RoundCorner.swift */,
+				F6E57E7021134D5000C58555 /* UITableView+Spinner.swift */,
+				F6E57E742113593A00C58555 /* Date+StringToDate.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -444,8 +453,10 @@
 			files = (
 				F6F6E2362111E9FC008377AB /* TimelineCell.swift in Sources */,
 				F6F6E2382111EA2F008377AB /* TimelineTitleView.swift in Sources */,
+				F6E57E732113590800C58555 /* UIImage+NumberMask.swift in Sources */,
 				F6F6E2572111FB28008377AB /* R.generated.swift in Sources */,
 				F6F6E22E2111E14D008377AB /* Timeline.swift in Sources */,
+				F6E57E752113593A00C58555 /* Date+StringToDate.swift in Sources */,
 				F6F6E2462111F393008377AB /* Timeline3View.swift in Sources */,
 				F6B9CD022111DCF600E7734E /* ViewController.swift in Sources */,
 				F6F6E2332111E255008377AB /* ApiResult.swift in Sources */,
@@ -455,12 +466,13 @@
 				F6F6E2422111F368008377AB /* Timeline1View.swift in Sources */,
 				F6F6E2312111E1B5008377AB /* Api.swift in Sources */,
 				F6F6E23C2111EB08008377AB /* Configuration.swift in Sources */,
-				F6F6E2402111ED7A008377AB /* TLParentView.swift in Sources */,
+				F6F6E2402111ED7A008377AB /* TimelineParentView.swift in Sources */,
 				F6E57E6A211340C300C58555 /* UIView+RoundCorner.swift in Sources */,
 				F6F6E2482111F399008377AB /* Timeline4View.swift in Sources */,
 				F6F6E24A2111F3A0008377AB /* Timeline5View.swift in Sources */,
 				F6B9CD002111DCF600E7734E /* AppDelegate.swift in Sources */,
 				F6F6E2442111F373008377AB /* Timeline2View.swift in Sources */,
+				F6E57E7121134D5000C58555 /* UITableView+Spinner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Timeline2View: TLParentView {
+class Timeline2View: TimelineParentView {
 
   @IBOutlet var contentView: UIView!
 

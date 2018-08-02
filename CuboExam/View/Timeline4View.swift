@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Timeline4View: TLParentView {
+class Timeline4View: TimelineParentView {
 
   @IBOutlet var contentView: UIView!
 
@@ -45,5 +45,6 @@ class Timeline4View: TLParentView {
       $0.contentMode = .scaleAspectFill
       $0.clipsToBounds = true
     }
+    setupImageViewInteraction()
   }
 }

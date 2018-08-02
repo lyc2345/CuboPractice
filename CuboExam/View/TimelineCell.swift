@@ -16,7 +16,7 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
   // TimelineLayoutKit
   @IBOutlet weak var subContentView: UIView!
 
-  var timelineView: TLParentView?
+  var timelineView: TimelineParentView?
 
   func setLayout(timeline: Timeline) {
     if timelineView == nil {
@@ -24,7 +24,7 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
     }
   }
   
-  private func setImages(timelineView: TLParentView, timeline: Timeline) {
+  private func setImages(timelineView: TimelineParentView, timeline: Timeline) {
     
     for (index, urlString) in timeline.imageUrls.enumerated() {
       
@@ -35,19 +35,28 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
       }
       // uncomment this to use kingfisher async UIImageView
       //let url = URL(string: urlString)
-      //timelineView.imageViews[index].kf.setImage(with: url,
-      //                                           placeholder: nil,
-      //                                           options: [],
-      //                                           progressBlock: nil) { [weak self] (_, _, _, _) in
-      //                                            self?.setNeedsUpdateConstraints()
-      //                                            self?.updateConstraintsIfNeeded()
+      //timelineView.imageViews[index].kf.setImage(
+      //  with: url,
+      //  placeholder: nil,
+      //  options: [],
+      //  progressBlock: nil
+      //) { [weak self] (_, _, _, _) in
+      //
+      //    self?.setNeedsUpdateConstraints()
+      //    self?.updateConstraintsIfNeeded()
       //}
-      //timelineView.imageViews[index].imageFromServerURL(urlString: urlString)
       guard timeline.imageUrls.count == timeline.imageKeys.count else {
         return
       }
-      timelineView.imageViews[index].downloadImage(urlString: urlString,
-                                                   key: timeline.imageKeys[index]) { [weak self ](_) in
+      let imageView = timelineView.imageViews[index]
+      // set default background color for imageView
+      imageView.backgroundColor = Configuration.Theme.gray
+      
+      imageView.downloadImage(
+        urlString: urlString,
+        key: timeline.imageKeys[index]
+      ) { [weak self ](_) in
+        
         self?.setNeedsUpdateConstraints()
         self?.updateConstraintsIfNeeded()
       }
