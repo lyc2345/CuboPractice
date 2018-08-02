@@ -65,8 +65,8 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
   
   func bind(timeline: Timeline) {
     
-    timelineTitleView.titleLabel.text = timeline.title + timeline.imageKeys.reduce("", +)
-    timelineTitleView.subTitleLabel.text = timeline.displayDateString + "  count: \(timeline.imageUrls.count)"
+    timelineTitleView.titleLabel.text = timeline.title // + timeline.imageKeys.reduce("", +)
+    timelineTitleView.subTitleLabel.text = timeline.displayDateString // + "  count: \(timeline.imageUrls.count)"
 
     if let timelineView = self.timelineView {
       setImages(timelineView: timelineView, timeline: timeline)
