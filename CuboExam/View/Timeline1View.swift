@@ -24,6 +24,13 @@ class Timeline1View: TLParentView {
     setup()
   }
   
+  override func draw(_ rect: CGRect) {
+    super.draw(rect)
+    imageViews.forEach {
+      $0.roundCorner(radius: 2)
+    }
+  }
+  
   func xibInit() {
     Bundle.main.loadNibNamed(String(describing: type(of: self)),
                              owner: self,

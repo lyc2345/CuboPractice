@@ -14,7 +14,7 @@ enum Configuration {
     static let title = UIFont.systemFont(ofSize: 14)
     static let subTitle = UIFont.systemFont(ofSize: 12)
     
-    static let maskNumber = UIFont.systemFont(ofSize: 23)
+    static let maskNumber = UIFont.systemFont(ofSize: 27)
   }
   
   enum Theme {

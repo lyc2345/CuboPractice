@@ -21,7 +21,7 @@ struct Timeline {
   var title: String = ""
   var dateString: String = ""
   var imageUrls: [String] = []
-  
+
   var displayDateString: String {
     guard let date = Date.date(from: self.dateString) else {
       return ""

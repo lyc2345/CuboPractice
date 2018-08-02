@@ -17,7 +17,7 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
   @IBOutlet weak var subContentView: UIView!
 
   var timelineView: TLParentView?
-  
+
   func setLayout(timeline: Timeline) {
     if timelineView == nil {
       timelineView = bind(timelineType: TimelineType(urls: timeline.imageUrls))
@@ -33,6 +33,7 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
         timelineView.imageViews.last?.mask(count: moreNumber)
         return
       }
+      // uncomment this to use kingfisher async UIImageView
       //let url = URL(string: urlString)
       //timelineView.imageViews[index].kf.setImage(with: url,
       //                                           placeholder: nil,
@@ -43,8 +44,11 @@ class TimelineCell: UITableViewCell, TimelineLayoutKit {
       //}
       //timelineView.imageViews[index].imageFromServerURL(urlString: urlString)
       timelineView.imageViews[index].downloadImage(urlString: urlString) { [weak self] (_) in
-        self?.setNeedsUpdateConstraints()
-        self?.updateConstraintsIfNeeded()
+        //self?.setNeedsUpdateConstraints()
+        //self?.updateConstraintsIfNeeded()
+        
+        self?.setNeedsLayout()
+        self?.layoutIfNeeded()
       }
     }
   }
