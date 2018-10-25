@@ -25,9 +25,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     return _indicatorView
   }()
   
+  var first: Bool = true
+  
   var currentPages: Int {
     if timelines.count == 0 { return 0 }
-    return timelines.count / 10
+    return timelines.count
   }
   
   // MARK: ViewController life cycle
@@ -62,10 +64,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       switch result {
       case .success(timelines: let newTimelines):
         
-        self?.timelines.append(contentsOf: newTimelines)
-        self?.tableView.reloadData()
-        completion?()
-        
+        //self?.timelines.append(contentsOf: newTimelines){
+        if self?.first == true {
+          self?.timelines = (self?.timelines ?? []) + newTimelines // Array(newTimelines[0..<3])
+          self?.tableView.reloadData()
+          completion?()
+          self?.first = false
+        } else {
+          guard newTimelines.count > 0 else {
+            completion?()
+            return
+          }
+          self?.timelines = (self?.timelines ?? []) + newTimelines // Array(newTimelines[0..<3])
+          self?.tableView.reloadData()
+          completion?()
+        }
+
       // to handle request error
       case .failure(error: _):
         completion?()
@@ -98,15 +112,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       let timeline = timelines[indexPath.row]
       cell.setLayout(timeline: timeline)
     }
-    
-    // if scroll to bottom, fetch more
-    if timelines.count - 1 == indexPath.row {
-      print("loading current page: \(currentPages)")
-      tableView.startSpinning()
-      fetchTimelines(pageNumber: currentPages) { [weak self] in
-        self?.tableView.stopSpinning()
-      }
-    }
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -130,6 +135,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     return cell
+  }
+}
+
+extension ViewController {
+  func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    let offset = scrollView.contentOffset.y
+    let absoluteBottom = scrollView.contentSize.height - scrollView.frame.size.height
+    
+    if (absoluteBottom - offset <= 10) {
+      // if scroll to bottom, fetch more
+      tableView.startSpinning()
+      fetchTimelines(pageNumber: currentPages) { [weak self] in
+        self?.tableView.stopSpinning()
+      }
+    }
   }
 }
 
